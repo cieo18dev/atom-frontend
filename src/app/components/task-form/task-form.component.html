@@ -1,0 +1,16 @@
+<h2>Create New Task</h2>
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()" class="task-form">
+    <mat-form-field appearance="fill">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title" required>
+        <mat-error *ngIf="taskForm.get('title')?.invalid">Title is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description" required>
+        <mat-error *ngIf="taskForm.get('description')?.invalid">Description is required</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Add Task</button>
+</form>

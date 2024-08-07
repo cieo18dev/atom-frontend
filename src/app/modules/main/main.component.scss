@@ -1,0 +1,22 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .main-container {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .app-task-form, .app-task-list {
+      flex: 1;
+      max-width: 48%;
+  }
+}
+
+.app-task-form {
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,18 @@
+<h2 mat-dialog-title>Edit Task</h2>
+<mat-dialog-content [formGroup]="editTaskForm">
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput formControlName="title">
+    <mat-error *ngIf="editTaskForm.get('title')?.invalid">Title is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <input matInput formControlName="description">
+    <mat-error *ngIf="editTaskForm.get('description')?.invalid">Description is required</mat-error>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button color="primary" (click)="onSave()">Save</button>
+</mat-dialog-actions>

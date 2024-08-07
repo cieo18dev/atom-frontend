@@ -1,0 +1,13 @@
+<div>
+  <button mat-stroked-button color="primary" (click)="logout()">Logout</button>
+  <div class="main-container">
+    <app-task-form class="app-task-form" (taskCreated)="addTask($event)"></app-task-form>
+    <div style="margin-top: 2rem;"></div>
+    <app-task-list class="app-task-list" 
+                   [tasks]="tasks" 
+                   (taskToggled)="toggleTaskCompletion($event)"
+                   (taskEdited)="editTask($event)"
+                   (taskDeleted)="deleteTask($event)">
+    </app-task-list>
+  </div>
+</div>
