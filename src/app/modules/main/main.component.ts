@@ -68,7 +68,7 @@ export class MainComponent implements OnInit {
     }
 
     logout() {
-        sessionStorage.removeItem("email");
+        localStorage.removeItem("email");
         this.router.navigate(["/login"]);
     }
 }
